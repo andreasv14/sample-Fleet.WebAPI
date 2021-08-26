@@ -1,4 +1,4 @@
-﻿namespace Fleet.Models
+﻿namespace Fleet.Domain
 {
     public abstract class BaseModel
     {

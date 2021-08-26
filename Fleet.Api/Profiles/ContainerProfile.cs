@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Fleet.Domain;
 
 namespace Fleet.Api.Profiles
 {
@@ -6,10 +7,10 @@ namespace Fleet.Api.Profiles
     {
         public ContainerProfile()
         {
-            CreateMap<Models.Container, Dtos.ContainerDto>()
+            CreateMap<Container, Dtos.ContainerDto>()
                 .ForMember(dest => dest.ContainerId, opt => opt.MapFrom(src => src.Id));
 
-            CreateMap<Dtos.ContainerDto, Models.Container>()
+            CreateMap<Dtos.ContainerDto, Container>()
              .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.ContainerId));
         }
     }

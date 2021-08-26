@@ -1,4 +1,4 @@
-﻿using Fleet.Models;
+﻿using Fleet.Domain;
 
 namespace Fleet.Api.Factories
 {

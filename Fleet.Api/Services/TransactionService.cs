@@ -1,6 +1,6 @@
 ﻿using Fleet.Api.Factories;
 using Fleet.Data;
-using Fleet.Models;
+using Fleet.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

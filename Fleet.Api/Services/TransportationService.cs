@@ -1,7 +1,8 @@
 ﻿using Fleet.Api.Exceptions;
 using Fleet.Data;
-using Fleet.Models;
-using Fleet.Models.Enums;
+using Fleet.Domain;
+using Fleet.Domain.Enums;
+using Fleet.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

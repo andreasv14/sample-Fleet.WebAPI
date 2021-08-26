@@ -1,4 +1,4 @@
-﻿using Fleet.Models;
+﻿using Fleet.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

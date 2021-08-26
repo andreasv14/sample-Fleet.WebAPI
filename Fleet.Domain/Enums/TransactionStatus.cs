@@ -1,4 +1,4 @@
-﻿namespace Fleet.Models.Enums
+﻿namespace Fleet.Domain.Enums
 {
     public enum TransactionStatus
     {

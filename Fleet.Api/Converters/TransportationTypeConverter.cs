@@ -1,4 +1,4 @@
-﻿using Fleet.Models.Enums;
+﻿using Fleet.Domain.Enums;
 using System;
 
 namespace Fleet.Api.Converters

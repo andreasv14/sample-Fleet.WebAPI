@@ -2,8 +2,8 @@
 using Fleet.Api.Exceptions;
 using Fleet.Api.Factories;
 using Fleet.Api.Services;
+using Fleet.Domain;
 using Fleet.Dtos;
-using Fleet.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

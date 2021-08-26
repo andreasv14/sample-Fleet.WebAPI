@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
-using Fleet.Api.Converters;
 using Fleet.Api.Exceptions;
 using Fleet.Api.Factories;
 using Fleet.Api.Services;
+using Fleet.Domain;
 using Fleet.Dtos;
-using Fleet.Models;
-using Fleet.Models.Enums;
+using Fleet.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

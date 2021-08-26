@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Fleet.Models
+﻿namespace Fleet.Domain
 {
     public class Container : BaseModel
     {

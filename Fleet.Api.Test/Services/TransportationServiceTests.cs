@@ -1,6 +1,7 @@
 ﻿using Fleet.Api.Services;
 using Fleet.Api.Test.Helpers;
-using Fleet.Models;
+using Fleet.Domain;
+using Fleet.Domain.Enums;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Xunit;
@@ -34,7 +35,7 @@ namespace Fleet.Api.Test.Services
         public void LoadAsync_ContainersListIsEmpty_ThrowValidationException()
         {
             //Arrange
-            var newContainersToBeLoad = new List<Models.Container>();
+            var newContainersToBeLoad = new List<Container>();
 
             //Act and Assert
             Assert.ThrowsAsync<ValidationException>(() => _transportationService.LoadAsync(1, newContainersToBeLoad));
@@ -46,10 +47,10 @@ namespace Fleet.Api.Test.Services
             //Arrange
             var transportationId = 1;
 
-            var newContainersToBeLoad = new List<Models.Container>()
+            var newContainersToBeLoad = new List<Container>()
             {
-                 new Models.Container {Id = 1, Name = "Container 1"},
-                 new Models.Container {Id = 2, Name = "Container 2"}
+                 new Container {Id = 1, Name = "Container 1"},
+                 new Container {Id = 2, Name = "Container 2"}
             };
 
             //Act
@@ -67,13 +68,13 @@ namespace Fleet.Api.Test.Services
             //Arrange
             var transportationId = 1;
 
-            var newContainersToBeLoad = new List<Models.Container>()
+            var newContainersToBeLoad = new List<Container>()
             {
-                 new Models.Container {Id = 1, Name = "Container 1"},
-                 new Models.Container {Id = 2, Name = "Container 2"},
-                 new Models.Container {Id = 3, Name = "Container 3"},
-                 new Models.Container {Id = 4, Name = "Container 4"},
-                 new Models.Container {Id = 5, Name = "Container 5"}
+                 new Container {Id = 1, Name = "Container 1"},
+                 new Container {Id = 2, Name = "Container 2"},
+                 new Container {Id = 3, Name = "Container 3"},
+                 new Container {Id = 4, Name = "Container 4"},
+                 new Container {Id = 5, Name = "Container 5"}
             };
 
             //Act and Assert
@@ -86,12 +87,12 @@ namespace Fleet.Api.Test.Services
             //Arrange
             var transportationId = 1;
 
-            var newContainersToBeLoad = new List<Models.Container>()
+            var newContainersToBeLoad = new List<Container>()
             {
-                 new Models.Container {Id = 1, Name = "Container 1"},
-                 new Models.Container {Id = 2, Name = "Container 2"},
-                 new Models.Container {Id = 3, Name = "Container 3"},
-                 new Models.Container {Id = 4, Name = "Container 4"},
+                 new Container {Id = 1, Name = "Container 1"},
+                 new Container {Id = 2, Name = "Container 2"},
+                 new Container {Id = 3, Name = "Container 3"},
+                 new Container {Id = 4, Name = "Container 4"},
             };
 
             //Act
@@ -160,11 +161,11 @@ namespace Fleet.Api.Test.Services
         {
             var transportations = new List<Transportation>
             {
-                new Transportation { Id =1, Name = "Ship A" , Capacity = 4 , Type= Models.Enums.TransportationType.Ship},
-                new Transportation { Id =2, Name = "Ship B" , Capacity = 4 , Type= Models.Enums.TransportationType.Ship},
-                new Transportation { Id =3, Name = "Ship C" , Capacity = 4 , Type= Models.Enums.TransportationType.Ship},
-                new Transportation { Id =4, Name = "Truck A" , Capacity = 2 , Type= Models.Enums.TransportationType.Truck},
-                new Transportation { Id =5, Name = "Truck B" , Capacity = 2 , Type= Models.Enums.TransportationType.Truck}
+                new Transportation { Id =1, Name = "Ship A" , Capacity = 4 , Type= TransportationType.Ship},
+                new Transportation { Id =2, Name = "Ship B" , Capacity = 4 , Type= TransportationType.Ship},
+                new Transportation { Id =3, Name = "Ship C" , Capacity = 4 , Type= TransportationType.Ship},
+                new Transportation { Id =4, Name = "Truck A" , Capacity = 2 , Type= TransportationType.Truck},
+                new Transportation { Id =5, Name = "Truck B" , Capacity = 2 , Type= TransportationType.Truck}
             };
 
             context.Transportations.AddRange(transportations);

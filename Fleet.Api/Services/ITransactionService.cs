@@ -1,4 +1,4 @@
-﻿using Fleet.Models;
+﻿using Fleet.Domain;
 using System.Threading.Tasks;
 
 namespace Fleet.Api.Services

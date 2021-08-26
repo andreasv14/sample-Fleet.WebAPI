@@ -1,7 +1,7 @@
-﻿using Fleet.Models.Enums;
+﻿using Fleet.Domain.Enums;
 using System.Collections.Generic;
 
-namespace Fleet.Models
+namespace Fleet.Domain
 {
     public class Transportation : BaseModel
     {

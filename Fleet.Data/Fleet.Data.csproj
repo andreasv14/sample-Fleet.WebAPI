@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Fleet.Models\Fleet.Models.csproj" />
+    <ProjectReference Include="..\Fleet.Domain\Fleet.Domain.csproj" />
   </ItemGroup>
 
 </Project>

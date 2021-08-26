@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Fleet.Domain;
 using Fleet.Dtos;
-using Fleet.Models;
-using Fleet.Models.Enums;
+using Fleet.Domain.Enums;
 
 namespace Fleet.Api.Profiles
 {

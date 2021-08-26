@@ -1,5 +1,5 @@
 ﻿using Fleet.Data.EntityTypeConfigurations;
-using Fleet.Models;
+using Fleet.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Transactions;
 
@@ -11,7 +11,7 @@ namespace Fleet.Data
 
         public DbSet<Container> Containers { get; set; }
         public DbSet<Transportation> Transportations { get; set; }
-        public DbSet<Models.Transaction> Transactions { get; set; }
+        public DbSet<Domain.Transaction> Transactions { get; set; }
 
         #endregion
 

@@ -2,7 +2,7 @@
 using Fleet.Api.Services;
 using Fleet.Api.Test.Helpers;
 using Fleet.Data;
-using Fleet.Models;
+using Fleet.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

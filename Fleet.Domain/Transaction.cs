@@ -1,7 +1,7 @@
-﻿using Fleet.Models.Enums;
+﻿using Fleet.Domain.Enums;
 using System;
 
-namespace Fleet.Models
+namespace Fleet.Domain
 {
     public class Transaction : BaseModel
     {

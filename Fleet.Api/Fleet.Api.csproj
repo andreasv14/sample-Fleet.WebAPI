@@ -18,8 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Fleet.Data\Fleet.Data.csproj" />
+    <ProjectReference Include="..\Fleet.Domain\Fleet.Domain.csproj" />
     <ProjectReference Include="..\Fleet.Dtos\Fleet.Dtos.csproj" />
-    <ProjectReference Include="..\Fleet.Models\Fleet.Models.csproj" />
   </ItemGroup>
 
 </Project>

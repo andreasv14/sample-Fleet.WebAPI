@@ -1,5 +1,5 @@
-﻿using Fleet.Models;
-using Fleet.Models.Enums;
+﻿using Fleet.Domain;
+using Fleet.Domain.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

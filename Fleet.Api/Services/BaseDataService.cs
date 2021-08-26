@@ -1,6 +1,6 @@
 ﻿using Fleet.Api.Exceptions;
 using Fleet.Data;
-using Fleet.Models;
+using Fleet.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
