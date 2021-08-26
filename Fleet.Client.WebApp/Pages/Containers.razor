@@ -1,0 +1,48 @@
+﻿@page "/containers"
+@using Fleet.Client.WebApp.Data;
+@using Fleet.Dtos
+@using Radzen
+@inject ContainerDataService containerDataService
+<h1>Containers</h1>
+
+<div style="display: flex; align-items: center; margin-bottom: 16px">
+    <RadzenButton Click="@ClearSelection" Text="Clear Selection" />
+    <RadzenButton Click="@AddNewContainer" Text="Add" />
+    <RadzenButton Click="@ClearSelection" Text="Edit" />
+    <RadzenButton Click="@ClearSelection" Text="Remove" />
+    @if (selectedContainer?.Any() == true)
+    {
+        <div style="margin-left: 16px">
+            Selected Container: @selectedContainer[0].ContainerId @selectedContainer[0].Name
+        </div>
+    }
+</div>
+
+<RadzenDataGrid AllowFiltering="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowPaging="true" PageSize="4"
+                AllowSorting="true" Data="@containers" TItem="ContainerDto" ColumnWidth="200px"
+                SelectionMode="DataGridSelectionMode.Single" @bind-Value=@selectedContainer>
+    <Columns>
+        <RadzenDataGridColumn TItem="ContainerDto" Property="Id" Title="Container ID" />
+        <RadzenDataGridColumn TItem="ContainerDto" Property="Name" Title="Name" />
+    </Columns>
+</RadzenDataGrid>
+@code {
+    IEnumerable<ContainerDto> containers;
+    IList<ContainerDto> selectedContainer;
+
+    void ClearSelection()
+    {
+        selectedContainer = null;
+    }
+
+    void AddNewContainer()
+    {
+
+    }
+
+    protected override void OnInitialized()
+    {
+        containers = containerDataService.GetAll();
+        selectedContainer = containers.Take(1).ToList();
+    }
+}
